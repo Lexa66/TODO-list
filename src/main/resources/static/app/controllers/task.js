@@ -1,4 +1,5 @@
-angular.module('TodoList')
+angular
+    .module('TodoList')
     .controller('TaskController', function ($http, $scope, AuthService) {
         var edit = false;
         $scope.buttonText = 'Create';

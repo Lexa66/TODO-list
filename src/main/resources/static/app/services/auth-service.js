@@ -1,6 +1,7 @@
-angular.module('TodoList')
-.service('AuthService', function() {
-	return {
-		user : null
-	}
-});
+angular
+    .module('TodoList')
+    .service('AuthService', function () {
+        return {
+            user: null
+        }
+    });

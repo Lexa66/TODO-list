@@ -1,3 +1,4 @@
-angular.module('TodoList')
-.controller('PageNotFoundController', function($http, $scope, AuthService) {
-});
+angular
+    .module('TodoList')
+    .controller('PageNotFoundController', function ($http, $scope, AuthService) {
+    });
