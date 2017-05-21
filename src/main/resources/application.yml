@@ -1,0 +1,15 @@
+
+spring:
+    datasource:
+        url: jdbc:mysql://localhost:3306/todolist?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8
+        username: root
+        password: 6666
+    jpa:
+        hibernate:
+            ddl-auto: create
+    resources:
+        chain:
+            cache: false
+
+
+

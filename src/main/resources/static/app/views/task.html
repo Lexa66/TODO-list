@@ -1,0 +1,74 @@
+<div class="row">
+	<div class="col-sm-6 ">
+		<div class="panel panel-default">
+			<div class="panel-heading">Task</div>
+			<div class="panel-body">
+				<div class="col-md-12">
+					<form ng-submit="submit()" name="taskForm" novalidate>
+
+						<div class="form-group"
+							 ng-class="{ 'has-error': taskForm.title.$invalid && taskForm.title.$dirty }">
+							<label for="title">Title:</label> <input type="text" required
+																   class="form-control" ng-model="task.title" id="title"
+																   name="title">
+						</div>
+
+						<div class="form-group"
+							ng-class="{ 'has-error': taskForm.description.$invalid && taskForm.description.$dirty }">
+							<label for="description">Description:</label>
+							<textarea required class="form-control"
+								ng-model="task.description" id="description" title="description"></textarea>
+						</div>
+						<button type="submit" class="btn btn-default"
+							ng-disabled="taskForm.$invalid">{{buttonText}}</button>
+
+						<div class="alert alert-info margin-top-5" ng-show="message">{{message}}</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Task
+				<button type="button" class="btn btn-default btn-sm"
+					ng-click="initAddTask()">
+					<span class="glyphicon glyphicon-plus"></span> New task
+				</button>
+			</div>
+			<div class="panel-body">
+				<div class="alert alert-info margin-top-5" ng-show="deleteMessage">{{deleteMessage}}</div>
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>№</th>
+							<th>Title</th>
+							<th>Description</th>
+							<th></th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="task in taskList">
+							<td>{{$index+1}}</td>
+							<td>{{task.title}}</td>
+							<td>{{task.description}}</td>
+							<td><button type="button" class="btn btn-default btn-sm"
+									ng-click="initEdit(task)">
+									<span class="glyphicon glyphicon-edit"></span>
+								</button></td>
+							<td>
+								<button type="button" class="btn btn-default btn-sm"
+									ng-click="deleteTask(task)">
+									<span class="glyphicon glyphicon-trash"></span>
+								</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,32 @@
+### Gradle template
+.gradle
+/build/
+/classes/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+# User-specific stuff:
+.idea
+
+## File-based project format:
+*.iws
+
+## Plugin-specific files:
+
+# IntelliJ
+/out/
+
+### Java template
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
